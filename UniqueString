@@ -1,0 +1,32 @@
+/*
+File contains code that will traverse through the string and check if the characters are repeated. 
+It contains the character array that will keep a count of the characters currently visited. It stores value as a 
+counter the values are stored based on the character's ascii value
+*/
+import java.io.*;
+import java.util.*;
+
+public class UniqueString
+{
+	public static void main(String args[])
+	{
+		Scanner in= new Scanner(System.in);
+		
+		String st="abcdef";
+		
+		char ch[]=new char[256];
+		
+		for(int i=0;i<st.length();i++)
+		{
+			
+			ch[st.charAt(i)]++;
+			if(ch[st.charAt(i)]>1)
+			{
+				System.out.println("There is a repeat!");
+				System.exit(0);
+			}
+		
+		}
+		System.out.println("no repeat");
+	}
+}
